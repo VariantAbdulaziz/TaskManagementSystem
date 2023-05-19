@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace TaskManagementSystem.Domain;
-public class Task
+public class TaskEntity
 {
     public int Id { get; set; }
     public int OwnerId { get; set; }

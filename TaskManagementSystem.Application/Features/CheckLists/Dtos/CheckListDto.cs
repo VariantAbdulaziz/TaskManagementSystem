@@ -3,14 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TaskManagementSystem.Domain;
 
-namespace TaskManagementSystem.Domain;
-public class CheckList
+namespace TaskManagementSystem.Application.Features.CheckLists.Dtos;
+public class CheckListDto
 {
     public int Id { get; set; }
     public string Title { get; set; }
-    public string Description { get; set; }
+    public DateTime CreatedDate { get; set; }
+    public DateTime? CompletedDate { get; set; }
     public int TaskId { get; set; }
-    public bool IsCompleted { get; set; }
-    public TaskEntity Task { get; set; }
 }

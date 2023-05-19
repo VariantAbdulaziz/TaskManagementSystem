@@ -3,7 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskManagementSystem.Domain", "TaskManagementSystem.Domain\TaskManagementSystem.Domain.csproj", "{478FD394-01FF-4367-8081-6929B18FEFE1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TaskManagementSystem.Domain", "TaskManagementSystem.Domain\TaskManagementSystem.Domain.csproj", "{478FD394-01FF-4367-8081-6929B18FEFE1}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TaskManagementSystem.Application", "TaskManagementSystem.Application\TaskManagementSystem.Application.csproj", "{8A53E141-1A87-44D3-B67F-1EDE50C79E0D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TaskManagementSystem.Persistence", "TaskManagementSystem.Persistence\TaskManagementSystem.Persistence.csproj", "{6A57F322-4CB3-46E7-B6E2-3491FFEACF0E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskManagementSystem.API", "TaskManagementSystem.API\TaskManagementSystem.API.csproj", "{5A03FB80-F96C-4857-AE4B-3DD3F11B0B25}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskManagementSystem.UnitTests", "TaskManagementSystem.UnitTests\TaskManagementSystem.UnitTests.csproj", "{0C08C3E0-9259-42BA-B713-2A384C8E5E98}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,8 +23,27 @@ Global
 		{478FD394-01FF-4367-8081-6929B18FEFE1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{478FD394-01FF-4367-8081-6929B18FEFE1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{478FD394-01FF-4367-8081-6929B18FEFE1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8A53E141-1A87-44D3-B67F-1EDE50C79E0D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8A53E141-1A87-44D3-B67F-1EDE50C79E0D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8A53E141-1A87-44D3-B67F-1EDE50C79E0D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8A53E141-1A87-44D3-B67F-1EDE50C79E0D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6A57F322-4CB3-46E7-B6E2-3491FFEACF0E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6A57F322-4CB3-46E7-B6E2-3491FFEACF0E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6A57F322-4CB3-46E7-B6E2-3491FFEACF0E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6A57F322-4CB3-46E7-B6E2-3491FFEACF0E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5A03FB80-F96C-4857-AE4B-3DD3F11B0B25}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5A03FB80-F96C-4857-AE4B-3DD3F11B0B25}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5A03FB80-F96C-4857-AE4B-3DD3F11B0B25}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5A03FB80-F96C-4857-AE4B-3DD3F11B0B25}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0C08C3E0-9259-42BA-B713-2A384C8E5E98}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0C08C3E0-9259-42BA-B713-2A384C8E5E98}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0C08C3E0-9259-42BA-B713-2A384C8E5E98}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0C08C3E0-9259-42BA-B713-2A384C8E5E98}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F778A66D-79F8-453B-99AC-431F2CC3FC0D}
 	EndGlobalSection
 EndGlobal

@@ -4,13 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TaskManagementSystem.Domain;
-public class CheckList
+namespace TaskManagementSystem.Application.Features.CheckLists.Dtos;
+public class CheckListCreateDto
 {
-    public int Id { get; set; }
     public string Title { get; set; }
     public string Description { get; set; }
     public int TaskId { get; set; }
-    public bool IsCompleted { get; set; }
-    public TaskEntity Task { get; set; }
 }
