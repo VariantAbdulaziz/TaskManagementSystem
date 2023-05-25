@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using MediatR;
+using Microsoft.AspNetCore.Http;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,9 +17,11 @@ public class CreateTaskCommandHandler : IRequestHandler<CreateTaskCommand, int>
 {
     private readonly ITaskRepository _taskRepository;
     private readonly IMapper _mapper;
+    private readonly IHttpContextAccessor _httpContextAccessor;
 
-    public CreateTaskCommandHandler(ITaskRepository taskRepository, IMapper mapper)
+    public CreateTaskCommandHandler(ITaskRepository taskRepository, IMapper mapper, IHttpContextAccessor httpContextAccessor)
     {
+        _httpContextAccessor = httpContextAccessor;
         _taskRepository = taskRepository;
         _mapper = mapper;
     }
@@ -32,7 +35,9 @@ public class CreateTaskCommandHandler : IRequestHandler<CreateTaskCommand, int>
             throw new ValidationException(validationResult.Errors.Select(x => x.ErrorMessage));
 
         var task = _mapper.Map<TaskEntity>(request.TaskCreateDto);
-
+        task.ApplicationUserId = _httpContextAccessor.HttpContext.User.Claims
+            .FirstOrDefault(q => q.Type == "uid")?.Value;
+        
         task = await _taskRepository.AddAsync(task);
 
         return task.Id;

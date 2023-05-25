@@ -9,7 +9,7 @@ namespace TaskManagementSystem.Application.Features.Tasks.Dtos;
 public class TaskDto
 {
     public int Id { get; set; }
-    public int OwnerId { get; set; }
+    public string ApplicationUserId { get; set; }
     public string Title { get; set; }
     public string Description { get; set; }
     public DateTime StartDate { get; set; }

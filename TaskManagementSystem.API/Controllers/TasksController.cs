@@ -1,4 +1,5 @@
 ﻿using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using TaskManagementSystem.Application.Features.CheckLists.CQRS.Commands;
@@ -11,6 +12,7 @@ using TaskManagementSystem.Application.Features.Tasks.Dtos;
 namespace TaskManagementSystem.API.Controllers;
 [Route("api/[controller]")]
 [ApiController]
+[Authorize]
 public class TasksController : ControllerBase
 {
     public readonly IMediator _mediator;
@@ -24,7 +26,7 @@ public class TasksController : ControllerBase
         return Ok(await _mediator.Send(new GetAllTasksQuery()));
     }
 
-
+    [Authorize(Policy = "ResourceOwner")]
     [HttpGet("{id}")]
     public async Task<IActionResult> Get(int id)
     {
